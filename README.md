@@ -6,6 +6,8 @@ Nesse desafio trabalharemos no desenvolvimento de uma REST API para utilizar os 
 
 O projeto tem como objetivo dar suporte a equipe de nutricionistas da empresa Fitness Foods LC para que eles possam revisar de maneira rápida a informação nutricional dos alimentos que os usuários enviam pela aplicação móvel.
 
+[SPOILER] As instruções de entrega e apresentação do challenge estão no final deste Readme (=
+
 ### Obrigatório
  
 - Trabalhar em um FORK deste repositório em seu usuário ou fazer em seu github pessoal;
