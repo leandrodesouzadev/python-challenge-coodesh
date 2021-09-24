@@ -1,0 +1,17 @@
+version: "3.4"
+services:
+  api:
+    build:
+      context: ./
+    command: uvicorn app.main:app --host 0.0.0.0 --port 5000
+    expose:
+      - "5000"
+    ports:
+      - "80:5000"
+    restart: always
+
+  scraper:
+    build:
+      context: ./
+    command: python3.7 app/scraper/cron.py
+    restart: always

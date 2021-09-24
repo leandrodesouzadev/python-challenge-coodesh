@@ -5,6 +5,7 @@ import requests
 import datetime
 from pymongo import MongoClient
 from typing import List
+from app.core.config import settings
 
 
 class FoodScraper():
@@ -15,7 +16,7 @@ class FoodScraper():
     MAX_BYTES_TO_READ_FROM_ZIP: int = 1000000
 
     def __enter__(self):
-        client = MongoClient()
+        client = MongoClient(settings.MONGO_URI)
         self.client = client
         self.db = client.food
         return self

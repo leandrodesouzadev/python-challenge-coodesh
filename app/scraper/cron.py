@@ -5,6 +5,7 @@ from schedule import every
 from schedule import run_pending
 from schedule import run_all
 from app.scraper.food_scraper import FoodScraper
+from app.core.config import settings
 from pymongo import MongoClient
 
 
@@ -17,7 +18,7 @@ def start_scraper():
     client.close()
 
 def get_mongo_client_collection():
-    client = MongoClient()
+    client = MongoClient(settings.MONGO_URI)
     collection = client.food.scraper
     return client, collection
 

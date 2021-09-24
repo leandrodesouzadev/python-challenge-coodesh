@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     MAX_ITEMS_PER_PAGE: int = 100
     DEFAULT_ITEMS_PER_PAGE: int = 50
     SERVER_STARTED_AT: datetime = datetime.utcnow()
+    MONGO_URI: str = ''
     
 
-settings = Settings()
+settings = Settings('app/.env')
